@@ -101,11 +101,13 @@ ol {
 }
 
 .content__list-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 30px;
   height: 298px;
   overflow-y: scroll;
+  flex-grow: 1;
 }
 
 .content__list {
@@ -114,11 +116,14 @@ ol {
   gap: 23px;
 }
 
+.content__list-item {
+  padding: 0 3px;
+}
+
 .content__video-card {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 0 2px;
 }
 
 .content__video-card-thumbnail {
@@ -127,7 +132,7 @@ ol {
   object-position: center;
 }
 
-.content__video-card-description-container{
+.content__video-card-description-container {
   flex-grow: 1;
 }
 
@@ -187,7 +192,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 13px;
 }
 
 .search-form__fieldset {
@@ -215,7 +220,7 @@ ol {
   appearance: none;
 }
 
-.search-form__textfield::placeholder{
+.search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
@@ -246,4 +251,66 @@ ol {
   height: 100%;
   background-color: #fff;
   opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.search-form__label:hover {
+  cursor: pointer;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.button {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  height: 34px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  padding: 1px; 
+}
+
+.search-form__submit-button {
+  width: 194px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+  flex-shrink: 0; 
+}
+
+.content__list-item:active {
+  background-color: #545050;
+}
+
+.content__list-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content__video-card:focus {
+  outline: none;
+}
+
+.content__list-item:focus-visible {
+  outline: 1px solid #fff;
 }
