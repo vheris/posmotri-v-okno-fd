@@ -126,6 +126,7 @@ ol {
   height: 102px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
 .content__video-card-description-container {
@@ -179,6 +180,7 @@ ol {
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 196px;
 }
 
 .visually-hidden {
